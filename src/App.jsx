@@ -75,7 +75,7 @@ export default function App() {
             {actual === 'usuarios' && <Usuarios userId={user.id} />}
             {actual === 'reportes' && <Reportes />}
             {actual === 'adminclientes' && <AdminClientes />}
-            {actual === 'clientes' && <Clientes />}
+            {actual === 'clientes' && <Clientes puedeEliminar={perfil.rol === 'admin'} />}
             {actual === 'citas' && <Citas userId={user.id} />}
             {actual === 'atencion' && <Atencion userId={user.id} rol={perfil.rol} />}
             {actual === 'historial' && <Historial rol={perfil.rol} />}
